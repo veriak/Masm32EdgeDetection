@@ -1,0 +1,30 @@
+#include "resource.h"
+
+1           24      DISCARDABLE     "res\\manifest.txt"
+
+;IDI_ICON icon "res\main.ico"
+
+#define	IDM_EXIT				1001
+#define	IDM_PREVIEW				1010
+#define	IDM_CAPTURE				1011
+#define	IDM_GRABAFRAME			1012
+#define	IDM_SAVEFRAME			1013
+#define	IDM_FRAMEPROCESSING		1014		
+
+MainMenu MENUEX DISCARDABLE 
+begin
+POPUP "File", , MFT_STRING, MFS_ENABLED 
+begin 
+	    MENUITEM "E&xit", IDM_EXIT, MFT_STRING, MFS_ENABLED 
+end
+
+POPUP "Capture"
+begin
+        MENUITEM "Preview", IDM_PREVIEW, MFT_STRING, MFS_ENABLED
+        MENUITEM "Capture", IDM_CAPTURE, MFT_STRING, MFS_ENABLED
+        MENUITEM "", , MFT_SEPARATOR   
+        MENUITEM "Snap Shot", IDM_GRABAFRAME, MFT_STRING, MFS_ENABLED
+        MENUITEM "Save Frame", IDM_SAVEFRAME, MFT_STRING, MFS_ENABLED
+        MENUITEM "Frame Processing", IDM_FRAMEPROCESSING, MFT_STRING, MFS_ENABLED
+end        
+end
